@@ -35,6 +35,33 @@ console.log(nome);
 		$("[name = endereco]").removeClass("erro");
 		$("[name = senha]").removeClass("erro");
 	}
-	
+	var data = {
+		first_name: first_name,
+		last_name: last_name,
+		email: email,
+		age: age,
+		cpf: cpf,
+		cep: cep,
+		address: address,
+		password: password
+
+	};
+
+	$.ajax({
+		type:"post",
+		//nesse endereco eu vou enviar meu email e minha senha para o servidores
+		url: "http://192.168.20.91:3004/login?email=" + email + "&senha=" + senha + sobrenome + email + idade + cpf + cep + endereco,
+		success: function (res){
+			if(res.length > 0){
+				alert("login com sucesso!!!");
+
+			}else{
+				alert("Login Erro: Verificar o email e senha");
+				alert("Efetuar cadastro...");		
+			}
+
+		}
+
+	});
 return false;
 });

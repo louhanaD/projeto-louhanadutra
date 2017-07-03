@@ -16,6 +16,27 @@ $("#formulario").on("submit", function(){
 
 		
 	}
-	
+	var data = {
+		email: email,
+		password: password
 
+	};
+
+	$.ajax({
+		type:"get",
+		//nesse endereco eu vou enviar meu email e minha senha para o servidores
+		url: "http://192.168.20.91:3004/login?email=" + email + "&password=" + password,
+		success: function (res){
+			if(res.length > 0){
+				alert("login com sucesso!!!");
+
+			}else{
+				alert("Login Erro: Verificar o email e senha");
+				alert("Efetuar cadastro...");		
+			}
+
+		}
+
+	})
+return false;
 });
