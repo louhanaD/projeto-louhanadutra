@@ -1,0 +1,60 @@
+body{
+font-family: 'Open Sans', sans-serif;
+text-align: center;
+margin-top: 50px;
+margin-left: 50px;
+margin-right: 50px;
+background: #e0e80d;
+font-size: 18px;
+line-height: 190%;
+
+}
+.caixa{
+border-radius: 4px;
+width: 350px;
+height: 50px;
+color: #999;
+
+}
+.btnmentrar{
+background: #b4bb07;
+border-radius: 10px;
+width: 250px;
+height: 63px;
+color: white;
+font-size: 14px;
+text-transform: uppercase;
+}
+p{
+color: #84890d;
+}
+a{
+color: #444444;
+}
+.titulo{
+color: #444444;
+width: 100%;
+}
+#p{
+background: white;
+height: 86px;
+text-align: center;
+width: 100%;
+}
+.erro {
+	box-shadow: 0px 1px 10px 2px #F44336 !important;
+}
+@media screen and (max-width: 500px) {
+	
+	.btnmentrar {
+		display: block;
+		width: 50%;
+		margin: 15px auto;
+	}
+	.caixa {
+		display: block;
+		width: 110%;
+		margin: 15px auto;
+	}
+	
+}
