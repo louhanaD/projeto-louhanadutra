@@ -1,3 +1,7 @@
+$(document).ready(function(){
+  $("[name = cep]").mask('99999-999');
+  $("[name = cpf]").mask('999.999.999-99')
+});
 $("#formulario").on("submit", function(){
 	var nome = $("[name = nome]").val();
 	var sobrenome = $("[name = sobrenome]").val();
@@ -35,33 +39,44 @@ console.log(nome);
 		$("[name = endereco]").removeClass("erro");
 		$("[name = senha]").removeClass("erro");
 	}
+	//verifica os caracteres que podem e nao podem ser utilizados
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //pode utilizar! o if para uma negacao
+    if (re.test(email) === false){
+		alert("Campo de email inválido...");
+		$("[name = email]").addClass("erro");
+    	return false;
+    }
+    else{
+		$("[name = email]").removeClass("erro");
+    }
+
 	var data = {
-		first_name: first_name,
-		last_name: last_name,
+		first_name: nome,
+		last_name: sobrenome,
 		email: email,
-		age: age,
+		age: idade,
 		cpf: cpf,
 		cep: cep,
-		address: address,
-		password: password
+		address: endereco,
+		password: senha
 
 	};
 
 	$.ajax({
 		type:"post",
-		//nesse endereco eu vou enviar meu email e minha senha para o servidores
-		url: "http://192.168.20.91:3004/login?email=" + email + "&senha=" + senha + sobrenome + email + idade + cpf + cep + endereco,
+		url: "http://192.168.20.91:8085/register",
+		data: data,
 		success: function (res){
-			if(res.length > 0){
-				alert("login com sucesso!!!");
+			
+			alert("Cadastro realizado com sucesso!");
 
-			}else{
-				alert("Login Erro: Verificar o email e senha");
-				alert("Efetuar cadastro...");		
-			}
-
-		}
-
+		},
+		error: function(erro){
+			alert("erro.message");
+		}	
 	});
-return false;
+
+	return false;
+
 });

@@ -16,27 +16,38 @@ $("#formulario").on("submit", function(){
 
 		
 	}
-	var data = {
+	//verifica os caracteres que podem e nao podem ser utilizados
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if (re.test(email) === false){
+alert("Campo de email inválido...");
+	$("[name = email]").addClass("erro");
+    	return false;
+    }else{
+$("[name = email]").removeClass("erro");
+    }
+
+
+	var dadosEnvio = {
 		email: email,
-		password: password
+		password: senha
 
 	};
 
 	$.ajax({
-		type:"get",
-		//nesse endereco eu vou enviar meu email e minha senha para o servidores
-		url: "http://192.168.20.91:3004/login?email=" + email + "&password=" + password,
+		type:"post",
+		url: "http://192.168.20.91:8085/login",
+		data: dadosEnvio,
 		success: function (res){
-			if(res.length > 0){
-				alert("login com sucesso!!!");
+			
+			alert("login realizado com sucesso!");
 
-			}else{
-				alert("Login Erro: Verificar o email e senha");
-				alert("Efetuar cadastro...");		
-			}
+		},
+		error: function(xhr){
+			alert("xhr.responseJSON.error.message");
+		}	
+	});
 
-		}
+	return false;
 
-	})
-return false;
 });
