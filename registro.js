@@ -65,7 +65,7 @@ console.log(nome);
 
 	$.ajax({
 		type:"post",
-		url: "http://192.168.20.91:8085/register",
+		url: "http://realizadigital-api.nodo.cc/register",
 		data: data,
 		success: function (res){
 			

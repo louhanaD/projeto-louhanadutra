@@ -36,7 +36,7 @@ $("[name = email]").removeClass("erro");
 
 	$.ajax({
 		type:"post",
-		url: "http://192.168.20.91:8085/login",
+		url: "http://realizadigital-api.nodo.cc/login",
 		data: dadosEnvio,
 		success: function (res){
 			
