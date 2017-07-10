@@ -20,9 +20,9 @@ body{
 #bordaAvatar{
 	box-shadow: 3px 2px 2px 1px #eee !important;
 	height:301px;
-	width: 302px;
+	flex: 1;
 	border-radius: 10px;
-	margin: 20px;
+	margin: 20px 0;
 	position: relative;
 	margin-bottom: 26px;
 	margin-bottom: 50px;
@@ -45,14 +45,14 @@ body{
 #publicar{
 	box-shadow: 1px 2px 2px 1px #eee !important;
 	height: 298px;
-	width: 481px;
+	flex: 2;
 	border-radius: 10px;
-	margin: 20px;
-	margin-left: 50px;
+	margin: 20px 0;
+	margin-left: 3%;
 	position: relative;
 }
 textarea{
-	width: 422px;
+	width: 90%;
 	height: 156px;
 	background: #eee;
 	border-radius: 10px;
@@ -73,16 +73,14 @@ textarea{
 h3{
 	margin: 20px 20px 20px 20px;
 }
-.mensagem{
+.mensagem {
 	box-shadow: 2px 2px 2px 3px #eee !important;
-	
 	border-radius: 10px;
-	margin: 20px;
+	margin: 20px 0;
 	line-height: 20px;
 	text-align: justify;
 	padding: 20px 20px 20px 20px;
 	position: relative;
-	
 }
 
 #mensagem1 {
@@ -94,7 +92,6 @@ b{
 }
 #pubAva{
 	display: flex;
-	width: 900px;
 	height: 180px; 	
 }
 .email{
@@ -110,6 +107,7 @@ b{
 #tudo{
 	margin: 0 auto;
 	max-width: 800px;
+	width: 800px;
 	margin-bottom: 30px;
 
 }
@@ -119,16 +117,17 @@ b{
 	right: 15px;
 }
 @media screen and (max-width: 600px) {
-
+#tudo {
+	width: 87%;
+}
 	
 #bordaAvatar {
-		
-		width: 316px;
 		
 }
 
 #publicar{
-		width: 316px;
+		margin: 0;
+
 		
 }
 		textarea{
@@ -136,8 +135,7 @@ b{
 			
 		}
 .mensagem{
-		
-		width: 309px;
+
 }
 #pubAva{
 		flex-direction: column;
