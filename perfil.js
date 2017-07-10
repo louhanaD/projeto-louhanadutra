@@ -1,15 +1,7 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
+var count = 0;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].onclick = function() {
-  	//this se refere ao botão
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  }
-}
+$(".curtir").click(function() {
+  count++;
+  $(".curtir").html(count);
+  $(this).off(event);
+});
