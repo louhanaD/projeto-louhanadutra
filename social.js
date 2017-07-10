@@ -40,8 +40,18 @@ $("[name = email]").removeClass("erro");
 		data: dadosEnvio,
 		success: function (res){
 			
-			alert("login realizado com sucesso!");
+			var toSave = {
+				password: dadosEnvio.password,
+				email: dadosEnvio.email,
+				id: res.id,
+				age: res.age
+			}
 
+			localStorage.setItem('userData', JSON.stringify(toSave));
+			
+
+			alert("login realizado com sucesso!");
+ 		window.location = 'perfil.html';
 		},
 		error: function(xhr){
 			alert("xhr.responseJSON.error.message");
