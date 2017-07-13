@@ -94,7 +94,7 @@ b{
 	display: flex;
 	height: 180px; 	
 }
-.email{
+.email {
 	text-align: justify;
 	font-size: 18px;
 	border-top:  1px solid #eee;
@@ -110,6 +110,10 @@ b{
 	width: 800px;
 	margin-bottom: 30px;
 
+}
+.btn-refresh {
+	position: absolute;
+	right: 30px;
 }
 .curtir{
 	position: absolute;

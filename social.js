@@ -40,21 +40,18 @@ $("[name = email]").removeClass("erro");
 		data: dadosEnvio,
 		success: function (res){
 			
-			var toSave = {
-				password: dadosEnvio.password,
-				email: dadosEnvio.email,
-				id: res.id,
-				age: res.age
-			}
-
+			var toSave = res;
+			toSave.password = dadosEnvio.password;
+					//transforma em string
 			localStorage.setItem('userData', JSON.stringify(toSave));
 			
 
 			alert("login realizado com sucesso!");
- 		window.location = 'perfil.html';
+			
+ 			window.location = 'perfil.html';
 		},
 		error: function(xhr){
-			alert("xhr.responseJSON.error.message");
+			alert(xhr.responseJSON.error.message);
 		}	
 	});
 
