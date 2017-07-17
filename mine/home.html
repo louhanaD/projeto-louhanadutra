@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Realiza Digital Social Network</title>
+
+    <!-- CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/components.css">
+	<link rel="stylesheet" href="css/home.css">
+	<!-- // CSS -->
+</head>
+<body>
+
+    <!-- CONTENT -->
+    <div class="fixed-bar">
+        <img src="img/logo-small.png" alt="Realiza Digital">
+        <h1>Social Network</h1>
+        <span class="btn-refresh"><img src="img/icon-refresh.png" alt=""></span>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="user-info box">
+                <h2>Vincius Marques</h2>
+                <div class="avatar">VM</div>
+                <ul class="infos">
+                    <li>vinicius.marques@nodo.cc</li>
+                    <li>32 anos</li>
+                </ul>
+                <a href="#" class="edit"><img src="img/icon-edit.png" alt="Editar"></a>
+            </div>
+            <form class="write-post box">
+                <h3>Publicar:</h3>
+                <textarea name="post"></textarea>
+                <input type="submit" value="Enviar" class="btn btn-primary">
+            </form>
+        </div>
+        <ul id="posts">
+            <li class="post box">
+                <h4><strong>Vincius Marques</strong><span> - 06/07/2017 | 15:17hs</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore u fugiat nulla pariatur.</p>
+                <div class="likes">
+                    <span class="likes-num">10</span>
+                    <span class="btn-like"></span>
+                </div>
+            </li>
+            <li class="post box">
+                <h4><strong>Vincius Marques</strong><span> - 06/07/2017 | 15:17hs</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore u fugiat nulla pariatur.</p>
+                <div class="likes">
+                    <span class="likes-num">10</span>
+                    <span class="btn-like active"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- // CONTENT -->
+    
+    <!-- SCRIPTS -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+	<!-- // SCRIPTS -->
+</body>
+</html>

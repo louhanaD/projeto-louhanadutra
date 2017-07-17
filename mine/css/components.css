@@ -1,0 +1,38 @@
+.form_input {
+	height: 50px;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 12px;
+	border-radius: 4px;
+	border: none;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+	font-size: 16px;
+}
+
+.form_label {
+	font-size: 18px;
+	color: #003634;
+	font-weight: 600;
+	display: block;
+	padding-bottom: 10px;
+}
+
+.form_item {
+	padding-bottom: 40px;
+}
+
+.btn {
+	height: 60px;
+	padding: 0 50px;
+	text-align: center;
+	border: none;
+	font-size: 18px;
+	text-transform: uppercase;
+	border-radius: 4px;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+	background: #b4bb07;
+	color: #fff;
+}
