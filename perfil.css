@@ -59,11 +59,17 @@ textarea {
 	border: 1px solid #eee;
 	resize: none;
 }
-.imagens{
+.active {
 background-image: url(icon-like-active.png);
+width: 30px;
+height: 26px;
+display: inline-block;
 }
-.imagens2{
+.btn-like{
 background-image: url(icon-like.png);
+width: 30px;
+height: 26px;
+display: inline-block;
 }
 .mensagens{
 	width: 100%;
@@ -110,6 +116,9 @@ b{
 	display: flex;
 		
 }
+.likes-num{
+text-decoration: none;
+}
 .email {
 	text-align: justify;
 	font-size: 18px;
@@ -135,6 +144,12 @@ b{
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
+	text-decoration: none;
+}
+.erro{
+background: red;
+color: white;
+font-size: 18px;
 }
 @media screen and (max-width: 600px) {
 #tudo {
