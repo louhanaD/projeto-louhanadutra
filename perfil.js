@@ -1,3 +1,5 @@
+
+
 var userData = JSON.parse(localStorage.getItem('userData'));
 
 function loadUserData() {
@@ -111,10 +113,18 @@ $('body').on('click', '.btn-like', function(){
 $('body').on('click', '.btn-refresh', function(){
 	 loadFeeds();
 });
+
+$('body').on('click', '.editar', function(){
+	 window.location = 'editar.html';
+});
+
+
 function init() {
     loadUserData();
     loadFeeds();
+
     
 }
 
 init();
+

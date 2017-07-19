@@ -2,7 +2,7 @@ body{
 	margin: 0 auto;
 	background: #f9f9f9;
 	text-align: center;
-	padding-bottom: 90px;
+	text-decoration: none;
 }
 #cabecalho{
 	background: hsl(55, 76%, 56%);
@@ -71,13 +71,21 @@ width: 30px;
 height: 26px;
 display: inline-block;
 }
+
+#likes-a {
+
+	
+}
 .mensagens{
 	width: 100%;
 	/*height: 156px;*/
-	padding: 50px 50px;
 	border-radius: 10px;
 	
 }
+.mensagens img{
+max-width: 100%;
+}
+
 .age{
 text-align: justify;
 }
@@ -118,6 +126,8 @@ b{
 }
 .likes-num{
 text-decoration: none;
+position: absolute;
+left: 5px;
 }
 .email {
 	text-align: justify;
@@ -147,9 +157,8 @@ text-decoration: none;
 	text-decoration: none;
 }
 .erro{
-background: red;
-color: white;
-font-size: 18px;
+
+border: solid 1px red;
 }
 @media screen and (max-width: 600px) {
 #tudo {
