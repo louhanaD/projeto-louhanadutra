@@ -59,14 +59,16 @@ textarea {
 	border: 1px solid #eee;
 	resize: none;
 }
-.active {
-background-image: url(icon-like-active.png);
+
+.btn-like{
+background-image: url(icon-like.png);
 width: 30px;
 height: 26px;
 display: inline-block;
 }
-.btn-like{
-background-image: url(icon-like.png);
+
+.active {
+background-image: url(icon-like-active.png);
 width: 30px;
 height: 26px;
 display: inline-block;

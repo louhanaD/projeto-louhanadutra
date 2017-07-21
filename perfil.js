@@ -3,7 +3,7 @@
 var userData = JSON.parse(localStorage.getItem('userData'));
 
 function loadUserData() {
-    $('#bordaAvatar h3').text(userData.first_name + ' 	' + userData.last_name);
+    $('#bordaAvatar h3').text(userData.first_name + ' ' + userData.last_name);
     var initials = userData.first_name.charAt(0) +  userData.last_name.charAt(0);
     $("#avatar").text(initials.toUpperCase());
     $(".email").text(userData.email);
@@ -30,7 +30,7 @@ function loadFeeds(){
 				posts.reverse();
 				for(var i = 0; i < posts.length; i++){
 					
-					if(posts.liked){
+					if(posts[i].liked){
 							btn = "<span class='active' data-post-id='"+posts[i].post_id+"'></span>";
 					}else{
 							btn = "<span class='btn-like' data-post-id='"+posts[i].post_id+"'></span>";
@@ -75,10 +75,11 @@ $("form").on("submit", function(e){
 
 	return false;	
 });
-$('body').on('click', '.btn-like', function(){
-	var post_id = $(this).data(post_id);
+$('body').on('click', '.btn-like', function(e){
+	e.preventDefault();
+	var post_id = $(this).data('post-id');
 	var element = $(this);
-	if(element.HasClass('active')){
+	if(element.hasClass('active')){
 			$.ajax({
 					type: 'post',
 					url: 'http://realizadigital-api.nodo.cc/unlike/' + post_id,
@@ -90,9 +91,9 @@ $('body').on('click', '.btn-like', function(){
 						var num = res.likes;
 							element.parent().find('.likes-num').text(num);
 							element.removeClass('active');
-					}	
+					}
 				});
-		} 
+		}
 	
 	else{
 		$.ajax({
@@ -108,7 +109,7 @@ $('body').on('click', '.btn-like', function(){
 							element.addClass('active');
 					}
 		});//ajax
-	}
+	};
 });//on
 $('body').on('click', '.btn-refresh', function(){
 	 loadFeeds();
